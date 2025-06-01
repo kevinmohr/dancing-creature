@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Dancing Creature</title>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-</head>
-<body>
-  <a-scene embedded arjs>
-    <a-assets>
-      <a-asset-item id="model" src="dancing_creature.glb"></a-asset-item>
-    </a-assets>
+  <head>
+    <title>Dancing Creature</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="model" src="dancing_creature.glb"></a-asset-item>
+      </a-assets>
 
-    <a-entity gltf-model="#model" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
+      <a-entity gltf-model="#model" position="0 0 -3" rotation="0 180 0" scale="1 1 1"></a-entity>
 
-    <a-camera-static />
-  </a-scene>
-</body>
+      <a-light type="ambient" color="#ffffff"></a-light>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
 </html>
